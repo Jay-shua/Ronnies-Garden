@@ -19,27 +19,97 @@
   <body class="fade-in">
     <!-- Navbar -->
     <nav
+      aria-label="Global"
       class="fixed w-full bg-[#fff] bg-opacity-90 py-1 px-10 flex justify-between items-center z-10"
     >
-      <div class="great-vibes">
+      <div class="great-vibes text-gold ">
         <img src="/Logo Image.png" alt="ronnies garden logo" class="w-20" />
       </div>
+      <div class="flex lg:hidden">
+        <button
+          type="button"
+          command="show-modal"
+          commandfor="mobile-menu"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[#a35126]"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            data-slot="icon"
+            aria-hidden="true"
+            class="size-6"
+          >
+            <path
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
       <div
-        class="hidden md:flex lora text-[12px] lg:text-[14px] justify-between w-[40%]"
+        class="hidden lg:flex lora text-[12px] lg:text-[14px] justify-between w-[40%] fade-up"
       >
-        <a href="/" class="nav-link">Home</a>
+        <a href="/" class="nav-link ">Home</a>
         <a href="/about.html" class="nav-link">About</a>
         <a href="/rooms.html" class="nav-link">Rooms & Amenities</a>
         <a href="/gallery.html" class="nav-link">Gallery</a>
         <a href="/contact.html" class="nav-link active">Contact</a>
       </div>
-      <div
-        class="md:hidden"
-        onclick="this.nextElementSibling.classList.toggle('active')"
-      >
-        🍔
-      </div>
     </nav>
+    <el-dialog class="">
+      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+          <el-dialog-panel
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
+              <a href="#" class="p-1.5">
+                <span class="sr-only">Ronnies Garden</span>
+                <img src="/Logo Image.png" alt="" class="h-16 w-auto" />
+              </a>
+              <button
+                type="button"
+                command="close"
+                commandfor="mobile-menu"
+                class="-m-2.5 rounded-md p-2.5 text-[#a35126]"
+              >
+                <span class="sr-only">Close menu</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  data-slot="icon"
+                  aria-hidden="true"
+                  class="size-6"
+                >
+                  <path
+                    d="M6 18 18 6M6 6l12 12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-3 text-[#d3ac6c] py-6 lora text-[14px] flex flex-col">
+                  <a href="/" class=" border border-white hover:border-[#d3ac6c] p-3 rounded-md">Home</a>
+                  <a href="/about.html" class="border border-white hover:border-[#d3ac6c] p-3 rounded-md">About</a>
+                  <a href="/rooms.html" class="border border-white hover:border-[#d3ac6c] p-3 rounded-md">Rooms & Amenities</a>
+                  <a href="/gallery.html" class="border border-white hover:border-[#d3ac6c] p-3 rounded-md">Gallery</a>
+                  <a href="/contact.html" class=" active border border-white hover:border-[#d3ac6c] p-3 rounded-md">Contact</a>
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
 
     <section class="relative pt-10 px-4 md:px-20">
       <h1
@@ -48,9 +118,9 @@
         Contact & Booking Inquiry
       </h1>
       <div
-        class="mt-6 max-w-4xl mx-auto flex flex-col lg:flex-row gap-10 items-center"
+        class="mt-6 w-4/5 lg:max-w-11/12 mx-auto flex flex-col lg:flex-row gap-10 items-center"
       >
-        <form id="bookingForm" class="w-full md:w-1/2 p-6 rounded shadow">
+        <form id="bookingForm" class="w-full lg:w-1/2 p-6 rounded shadow flex flex-col">
           <div class="mb-4">
             <label class="block lora">Name <span class="text-[#d3ac6c]">*</span></label>
             <input
@@ -119,11 +189,11 @@
             Thank you! Your inquiry has been submitted. We will get back to you soon.
           </div>
         </form>
-        <div class="w-full md:w-1/2 mt-6 md:mt-0">
-          <p class="text-[25px] text-center text-[#d3ac6c] great-vibes">
+        <div class="w-full lg:w-1/2 mt-6 md:mt-0">
+          <p class="lg:text-[25px] text-[40px] text-center text-[#d3ac6c] great-vibes">
             Contact Us
           </p>
-          <p class="lora">
+          <p class="lora text-center lg:text-left text-[18px]">
             We’d love to help you plan your serene escape. Reach us directly:
           </p>
           <div class="lora mt-2 text-[14px] flex flex-row gap-x-1">

@@ -101,3 +101,7 @@
 .background1{
   background-image: url("/RG\ Photo\ 4.jpg");
 }
+
+dialog .active{
+  border-color: #d3ac6c;
+}
