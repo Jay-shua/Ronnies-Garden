@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronnie's Garden - About</title>
+    <meta
+      name="description"
+      content="Escape to serenity at Ronnie's Garden, Ijebu's premier hotel offering peace and luxury amidst nature."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./src/input.css" rel="stylesheet" />
+  </head>
+  <body class="fade-in">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full bg-[#fff] bg-opacity-90 py-1 px-10 flex justify-between items-center z-10"
+    >
+      <div class="great-vibes fade-up">
+        <img src="/Logo Image.png" alt="ronnies garden logo" class="w-20" />
+      </div>
+      <div
+        class="hidden md:flex lora text-[12px] lg:text-[14px] justify-between w-[40%] fade-up"
+      >
+        <a href="/" class="nav-link">Home</a>
+        <a href="./about" class="nav-link">About</a>
+        <a href="./rooms" class="nav-link">Rooms & Amenities</a>
+        <a href="./gallery" class="nav-link active">Gallery</a>
+        <a href="./contact" class="nav-link">Contact</a>
+      </div>
+      <div
+        class="md:hidden"
+        onclick="this.nextElementSibling.classList.toggle('active')"
+      >
+        🍔
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="min-h-screen py-10 px-4 md:px-20 relative">
+      <div class="w-4/5 mx-auto md:text-center text-justify mt-20">
+        <h1 class="text-5xl great-vibes text-[#d3ac6c] text-center mb-4">
+          Gallery
+        </h1>
+        <p class="lora text-[15px] ">
+          Take a visual journey through Ronnie’s Garden. From the elegance of
+          our rooms to the beauty of our natural surroundings, our gallery
+          captures the essence of your future retreat. Scroll through to see the
+          lush landscapes, cozy interiors, and tranquil corners that await you
+          in Ijebu.
+        </p>
+      </div>
+      <div
+        class="mt-6 w-4/5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gallery-grid"
+      >
+        <div class="gallery-item fade-up">
+          <img
+            src="/RG Photo 3.avif"
+            alt="Ronnie's Garden room interior"
+            class="w-full h-64 object-cover rounded-lg cursor-pointer"
+            onclick="openLightbox('../public/gallery1.jpg', 'Ronnie\'s Garden room interior')"
+          />
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay: 0.1s">
+          <img
+            src="/RG Photo 4.avif"
+            alt="Ronnie's Garden garden view"
+            class="w-full h-64 object-cover rounded-lg cursor-pointer"
+            onclick="openLightbox('../public/gallery2.jpg', 'Ronnie\'s Garden garden view')"
+          />
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay: 0.2s">
+          <img
+            src="/RG Photo 6.avif"
+            alt="Ronnie's Garden outdoor area"
+            class="w-full h-64 object-cover rounded-lg cursor-pointer"
+            onclick="openLightbox('../public/gallery3.jpg', 'Ronnie\'s Garden outdoor area')"
+          />
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay: 0.3s">
+          <img
+            src="/RG Photo 8.avif"
+            alt="Ronnie's Garden serene landscape"
+            class="w-full h-64 object-cover rounded-lg cursor-pointer"
+            onclick="openLightbox('../public/gallery4.jpg', 'Ronnie\'s Garden serene landscape')"
+          />
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay: 0.4s">
+          <img
+            src="/RG Photo 1.avif"
+            alt="Ronnie's Garden additional view"
+            class="w-full h-64 object-cover rounded-lg cursor-pointer"
+            onclick="openLightbox('../public/gallery5.jpg', 'Ronnie\'s Garden additional view')"
+          />
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <button
+          class="px-6 py-2 bg-gold text-white rounded hover:bg-opacity-80"
+        >
+          View More
+        </button>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black bg-opacity-90 hidden flex items-center justify-center z-50"
+    >
+      <span
+        class="absolute top-4 right-4 text-white text-3xl cursor-pointer z-100"
+        onclick="closeLightbox()"
+        >×</span
+      >
+      <img
+        id="lightbox-image"
+        class="max-w-[90%] max-h-[90%] object-contain"
+        alt="Lightbox image"
+      />
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#a35126] p-4 text-center mt-10">
+      <p class="lora text-white text-[14px]">
+        © 2025 Ronnie's Garden | Ijebu, Ogun State
+      </p>
+    </footer>
+  </body>
+  <script src="./src/script.js" defer></script>
+</html>

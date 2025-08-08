@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+@layer components {
+  .hidden {
+    @apply md:flex;
+  }
+  .md:hidden ~ .hidden {
+    @apply hidden;
+  }
+  .md:hidden ~ .hidden.active {
+    @apply flex flex-col absolute top-16 right-4 bg-black p-4 rounded shadow-lg;
+  }
+  .carousel-container {
+    @apply relative w-full max-w-4xl mx-auto;
+  }
+  .carousel {
+    @apply overflow-hidden;
+  }
+  .carousel-slide {
+    @apply flex w-full;
+  }
+  .carousel-item {
+    @apply w-full flex-shrink-0;
+  }
+  .gallery-item {
+    @apply relative overflow-hidden rounded-lg;
+  }
+  .gallery-item img {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
+
+@layer base {
+  /* Fade-in animation for page load */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  /* Fade-up animation for scroll */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@layer utilities {
+  /* Define the fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.great-vibes {
+  font-family: "Great Vibes", cursive;
+  font-style: normal;
+}
+.lora {
+  font-family: "Lora", serif;
+  font-style: normal;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: #d3ac6c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: #d3ac6c;
+  transition: width 0.5s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active (clicked) state */
+.nav-link.active::after {
+  width: 100%;
+}
+
+.background1{
+  background-image: url("/RG\ Photo\ 4.jpg");
+}

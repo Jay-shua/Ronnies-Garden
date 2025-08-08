@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronnie's Garden - About</title>
+    <meta
+      name="description"
+      content="Escape to serenity at Ronnie's Garden, Ijebu's premier hotel offering peace and luxury amidst nature."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./src/input.css" rel="stylesheet" />
+    <!-- <div> Icons made by <a href="https://www.flaticon.com/authors/ekros" title="Ekros"> Ekros </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div> -->
+  </head>
+  <body class="fade-in">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full bg-[#fff] bg-opacity-90 py-1 px-10 flex justify-between items-center z-10"
+    >
+      <div class="great-vibes ">
+        <img src="/Logo Image.png" alt="ronnies garden logo" class="w-20" />
+      </div>
+      <div
+        class="hidden md:flex lora text-[12px] lg:text-[14px] justify-between w-[40%] fade-up"
+      >
+        <a href="/" class="nav-link">Home</a>
+        <a href="./about" class="nav-link">About</a>
+        <a href="./rooms" class="nav-link active">Rooms & Amenities</a>
+        <a href="./gallery" class="nav-link">Gallery</a>
+        <a href="./contact" class="nav-link">Contact</a>
+      </div>
+      <div
+        class="md:hidden"
+        onclick="this.nextElementSibling.classList.toggle('active')"
+      >
+        🍔
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section
+      class="lg:h-screen py-10 px-4 md:px-20 relative flex items-center flex-col justify-center"
+    >
+      <h1
+        class="text-4xl mt-20 lg:mt-0 lg:text-5xl great-vibes text-gold text-center text-[#d3ac6c]"
+      >
+        Rooms & Amenities
+      </h1>
+      <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:max-w-6xl mx-auto w-4/5">
+        <!-- Haven Room (Cheaper) -->
+        <div class="bg-white text-[#d3ac6c] p-6 rounded-lg shadow-lg fade-up" style="transition-delay: 0.2s">
+          <img
+            src=""
+            alt="Haven Room at Ronnie's Garden"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h2 class="text-3xl great-vibes text-gold mt-4">Haven</h2>
+          <p class="mt-2 lora text-base">
+            The Haven offers a cozy, affordable retreat with garden views,
+            perfect for solo travelers or couples seeking a peaceful stay amidst
+            nature’s embrace.
+          </p>
+        </div>
+        <!-- Oasis Room (More Expensive) -->
+        <div
+          class="bg-white text-[#d3ac6c] p-6 rounded-lg shadow-lg fade-up"
+          style="transition-delay: 0.4s"
+        >
+          <img
+            src=""
+            alt="Oasis Room at Ronnie's Garden"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h2 class="text-3xl great-vibes text-gold mt-4">Oasis</h2>
+          <p class="mt-2 lora text-base">
+            The Oasis provides a luxurious escape with spacious interiors and
+            panoramic views, ideal for families or those desiring an upscale
+            nature experience.
+          </p>
+        </div>
+      </div>
+     
+    </section>
+
+     <!-- Amenities Section -->
+    <section class=" max-w-4xl mx-auto min-h-screen flex flex-col justify-center items-center">
+      <h2 class="text-4xl great-vibes text-[#d3ac6c] text-center ">Our Amenities</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:w-full md:w-4/5 w-3/5 mx-auto">
+        <div class="bg-white p-4 rounded-lg shadow-lg text-center fade-up">
+          <img src="/icons/cctv-camera.png" class="w-[64px] mx-auto" alt="">
+          <p class="lora text-[16px] text-[#d3ac6c]">CCTV</p>
+          <p class="lora text-sm mt-2">24/7 security for your peace of mind.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg text-center fade-up" style="transition-delay: 0.1s">
+          <img src="/icons/cocktail.png" alt="" class="w-[64px] mx-auto">
+          <p class="lora text-[16px] text-[#d3ac6c]">Bar</p>
+          <p class="lora text-sm mt-2">Enjoy crafted cocktails in a cozy setting.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg text-center fade-up" style="transition-delay: 0.2s">
+          <img src="/icons/billiard.png" alt="" class="mx-auto">
+          <p class="lora text-[16px] text-[#d3ac6c]">Games Arena</p>
+          <p class="lora text-sm mt-2">Fun for all ages with diverse activities.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg text-center fade-up" style="transition-delay: 0.3s">
+          <img src="/icons/garden.png" alt="" class="mx-auto">
+          <p class="lora text-[16px] text-[#d3ac6c]">Garden</p>
+          <p class="lora text-sm mt-2">Stroll through our lush, tranquil oasis.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg text-center fade-up" style="transition-delay: 0.4s">
+          <img src="/icons/swimming.png" alt="" class="mx-auto">
+          <p class="lora text-[16px] text-[#d3ac6c]">Swimming Pool</p>
+          <p class="lora text-sm mt-2">Relax with a refreshing dip anytime.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg text-center fade-up" style="transition-delay: 0.5s">
+          <img src="/icons/furniture.png" alt="" class="w-[64px] mx-auto">
+          <p class="lora text-[16px] text-[#d3ac6c]">Executive Lounge</p>
+          <p class="lora text-sm mt-2">Elegant space for work or leisure.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg text-center fade-up" style="transition-delay: 0.6s">
+          <img src="/icons/wi-fi.png" alt="" class="w-[64px] mx-auto">
+          <p class="lora text-[16px] text-[#d3ac6c]">Free Wi-Fi</p>
+          <p class="lora text-sm mt-2">Stay connected throughout your stay.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-[#a35126] p-4 text-center mt-10">
+      <p class="lora text-white text-[14px]">
+        © 2025 Ronnie's Garden | Ijebu, Ogun State
+      </p>
+    </footer>
+    
+  </body>
+  <script src="./src/script.js" defer></script>
+</html>

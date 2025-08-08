@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronnie's Garden - About</title>
+    <meta
+      name="description"
+      content="Escape to serenity at Ronnie's Garden, Ijebu's premier hotel offering peace and luxury amidst nature."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./src/input.css" rel="stylesheet" />
+  </head>
+  <body class="fade-in">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full bg-[#fff] bg-opacity-90 py-1 px-10 flex justify-between items-center z-10"
+    >
+      <div class="great-vibes fade-up">
+        <img src="/Logo Image.png" alt="ronnies garden logo" class="w-20" />
+      </div>
+      <div
+        class="hidden md:flex lora text-[12px] lg:text-[14px] justify-between w-[40%] fade-up"
+      >
+        <a href="/" class="nav-link">Home</a>
+        <a href="./about" class="nav-link active">About</a>
+        <a href="./rooms" class="nav-link">Rooms & Amenities</a>
+        <a href="./gallery" class="nav-link">Gallery</a>
+        <a href="./contact" class="nav-link">Contact</a>
+      </div>
+      <div
+        class="md:hidden"
+        onclick="this.nextElementSibling.classList.toggle('active')"
+      >
+        🍔
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section
+      class="lg:h-screen py-10 px-4 md:px-20 relative flex items-center flex-col justify-center "
+    >
+      <h1
+        class="text-4xl mt-20 lg:mt-0 lg:text-5xl great-vibes text-gold text-center text-[#d3ac6c]"
+      >
+        About Ronnie's Garden
+      </h1>
+      <div
+        class="mt-6 w-[85%] mx-auto flex flex-col lg:flex-row lg:gap-7 items-center"
+      >
+        <div class="my-4 lg:w-[40%] flex flex-col gap-y-2">
+          <p class="lora text-base">Welcome to Ronnie's Garden,</p>
+          <p class="lora text-[25px]">Your Serene Escape in Ijebu-Imusin!</p>
+          <p class="lora text-base text-justify">
+            Nestled at Atoro Close, behind Oloko Palace, off Owu-Ikija Rd in
+            Ijebu-Imusin, Ogun State, Nigeria, Ronnie's Garden came to life in
+            2024 with a dream to create a nature-inspired retreat. Founded by a
+            visionary, we’ve transformed a peaceful plot into a sanctuary where
+            swaying palm trees and vibrant evening lights greet you. In just a
+            year, we’ve become a cherished destination for relaxation and
+            connection.
+          </p>
+        </div>
+
+        <div class="mt-6 md:mt-0 lg:ml-6 mx-auto lg:w-1/2">
+          <div class="overflow-hidden  w-full h-[350px] relative rounded-lg">
+            <video
+              id="video"
+              class="object-center h-auto object-cover"
+              autoplay
+              muted
+              loop
+            >
+              <source src="/RG Video 3.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carousel Section -->
+    <section class="md:my-10  lg:max-w-4xl w-4/5 mx-auto fade-up">
+      <h2
+        class="text-4xl md:text-5xl text-[#d3ac6c] great-vibes text-gold text-center mb-10"
+      >
+        Explore Our Gallery
+      </h2>
+      <div class="relative carousel-container">
+        <div class="carousel overflow-hidden">
+          <div
+            class="carousel-slide flex transition-transform duration-500 ease-in-out "
+          >
+            <a href="gallery.html" class="carousel-item w-full flex-shrink-0">
+              <img
+                src="./RG Photo 10.jpg"
+                alt="Ronnie's Garden room interior"
+                class="w-full h-[400px] object-cover rounded-lg"
+              />
+            </a>
+            <a href="gallery.html" class="carousel-item w-full flex-shrink-0">
+              <img
+                src="./RG Photo 8.avif"
+                alt="Ronnie's Garden garden view"
+                class="w-full h-[400px] object-cover rounded-lg object-center"
+              />
+            </a>
+            <a href="gallery.html" class="carousel-item w-full flex-shrink-0">
+              <img
+                src="./RG Photo 3.avif"
+                alt="Ronnie's Garden outdoor area"
+                class="w-full h-[400px] object-cover rounded-lg"
+              />
+            </a>
+            <a href="gallery.html" class="carousel-item w-full flex-shrink-0">
+              <img
+                src="./RG Photo 9.png"
+                alt="Ronnie's Garden serene landscape"
+                class="w-full h-[400px] object-cover rounded-lg"
+              />
+            </a>
+          </div>
+        </div>
+        <button
+          class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-[#d3ac6c] p-2 rounded-full hover:bg-opacity-75"
+        >
+          ❮
+        </button>
+        <button
+          class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-[#d3ac6c] p-2 rounded-full hover:bg-opacity-75"
+        >
+          ❯
+        </button>
+        <div class="carousel-dots flex justify-center mt-4 space-x-2">
+          <span
+            class="dot w-3 h-3 bg-white border border-[#d3ac6c] rounded-full cursor-pointer"
+          ></span>
+          <span
+            class="dot w-3 h-3 bg-white border border-[#d3ac6c] rounded-full cursor-pointer"
+          ></span>
+          <span
+            class="dot w-3 h-3 bg-white border border-[#d3ac6c] rounded-full cursor-pointer"
+          ></span>
+          <span
+            class="dot w-3 h-3 bg-white border border-[#d3ac6c] rounded-full cursor-pointer"
+          ></span>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="flex flex-col lg:flex-row w-4/5 mx-auto gap-y-4 lg:gap-x-4 mt-30 mb-10 fade-up"
+    >
+      <div class="lg:w-[55%] w-full">
+        <img src="./RG Photo 4.avif" alt="Ronnie’s Garden Entrance" />
+      </div>
+      <div class="text-[14px] lora flex flex-col gap-y-1 lg:w-[45%] justify-center text-justify">
+        <p class="text-[16px]">Location</p>
+        <p class="text-[25px]">An Arrival Like No Other</p>
+        <p>
+          Begin your journey to Ronnie’s Garden with a scenic drive through the
+          vibrant streets of Ijebu-Imusin, arriving at Atoro Close behind Oloko
+          Palace. Opt for a traditional taxi or your own vehicle — each path leads
+          to a warm welcome under swaying palm trees. This unique arrival sets
+          the tone for a tranquil escape, blending local charm with natural
+          serenity.
+        </p>
+        <a href="https://maps.app.goo.gl/wVztv56E1mFtBE179" class="underline text-[#d3ac6c] tracking-wider mt-4 transition-all hover:text-[#a35126]">FIND YOUR WAY HERE ></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#a35126] p-4 text-center mt-10">
+      <p class="lora text-white text-[14px]">
+        © 2025 Ronnie's Garden | Ijebu, Ogun State
+      </p>
+    </footer>
+  </body>
+  <script src="./src/script.js" defer></script>
+</html>

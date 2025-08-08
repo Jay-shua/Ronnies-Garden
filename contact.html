@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronnie's Garden</title>
+    <meta
+      name="description"
+      content="Escape to serenity at Ronnie's Garden, Ijebu's premier hotel offering peace and luxury amidst nature."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./src/input.css" rel="stylesheet" />
+  </head>
+  <body class="fade-in">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full bg-[#fff] bg-opacity-90 py-1 px-10 flex justify-between items-center z-10"
+    >
+      <div class="great-vibes">
+        <img src="/Logo Image.png" alt="ronnies garden logo" class="w-20" />
+      </div>
+      <div
+        class="hidden md:flex lora text-[12px] lg:text-[14px] justify-between w-[40%]"
+      >
+        <a href="/" class="nav-link">Home</a>
+        <a href="./about" class="nav-link">About</a>
+        <a href="./rooms" class="nav-link">Rooms & Amenities</a>
+        <a href="./gallery" class="nav-link">Gallery</a>
+        <a href="./contact" class="nav-link active">Contact</a>
+      </div>
+      <div
+        class="md:hidden"
+        onclick="this.nextElementSibling.classList.toggle('active')"
+      >
+        🍔
+      </div>
+    </nav>
+
+    <section class="relative pt-10 px-4 md:px-20">
+      <h1
+        class="text-4xl mt-20 lg:text-5xl great-vibes text-[#d3ac6c] text-center"
+      >
+        Contact & Booking Inquiry
+      </h1>
+      <div
+        class="mt-6 max-w-4xl mx-auto flex flex-col lg:flex-row gap-10 items-center"
+      >
+        <form id="bookingForm" class="w-full md:w-1/2 p-6 rounded shadow">
+          <div class="mb-4">
+            <label class="block lora">Name <span class="text-[#d3ac6c]">*</span></label>
+            <input
+              type="text"
+              name="name"
+              class="w-full mt-2 p-2 border border-[#a35126] placeholder:font-[lora] rounded text-[14px]"
+              placeholder="Your Full Name"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block lora">Email <span class="text-[#d3ac6c]">*</span></label>
+            <input
+              type="email"
+              name="email"
+              class="w-full mt-2 p-2 border border-[#a35126] placeholder:font-[lora] rounded text-[14px]"
+              placeholder="Your Email Address"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block lora">Check-in Date <span class="text-[#d3ac6c]">*</span></label>
+            <input
+              type="date"
+              name="checkin"
+              class="w-full mt-2 p-2 border border-[#a35126] placeholder:font-[lora] rounded text-[14px]"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block lora">Check-out Date <span class="text-[#d3ac6c]">*</span></label>
+            <input
+              type="date"
+              name="checkout"
+              class="w-full mt-2 p-2 border border-[#a35126] placeholder:font-[lora] rounded text-[14px]"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block lora">Room Type <span class="text-[#d3ac6c]">*</span></label>
+            <select
+              name="roomType"
+              class="w-full mt-2 p-2 border border-[#a35126] placeholder:font-[lora] rounded text-[14px]"
+              required
+            >
+              <option value="">Select Room Type</option>
+              <option value="Haven">Haven</option>
+              <option value="Oasis">Oasis</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label class="block lora">Message</label>
+            <textarea
+              name="message"
+              class="w-full mt-2 p-2 border-[#a35126] border rounded text-[14px]"
+              placeholder="Any additional requests"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="px-6 py-2 bg-[#d3ac6c] text-white mx-auto lora hover:cursor-pointer rounded hover:bg-opacity-80"
+          >
+            Submit Inquiry
+          </button>
+          <div id="successMessage" class="mt-4 text-green-500 text-center hidden">
+            Thank you! Your inquiry has been submitted. We will get back to you soon.
+          </div>
+        </form>
+        <div class="w-full md:w-1/2 mt-6 md:mt-0">
+          <p class="text-[25px] text-center text-[#d3ac6c] great-vibes">
+            Contact Us
+          </p>
+          <p class="lora">
+            We’d love to help you plan your serene escape. Reach us directly:
+          </p>
+          <div class="lora mt-2 text-[14px] flex flex-row gap-x-1">
+            <p>Phone:</p>
+            <a href="tel:+2349075252977" class="hover:underline transition-all"
+              >+234 907 525 2977,</a
+            >
+            <a href="tel:+2347067058389" class="hover:underline transition-all"
+              >+234 706 705 8389,</a
+            ><a href="tel:+2348084842642" class="hover:underline transition-all"
+              >+234 808 484 2642</a
+            >
+          </div>
+          <p class="lora text-[14px]">Email: info@ronniesgardens.com</p>
+          <p class="lora text-[14px]">
+            Address: Behind Oloko Palace Off Owu-Ikija Road Ijagbure, Ijebu
+            Imushin 122103, Ogun State
+          </p>
+          <div class="mt-4 w-full h-64 rounded-lg shadow-xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.762371843504!2d4.0001681!3d6.798739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10396bc7218ef761%3A0x806077f9ee27990d!2sRonnie&#39;s%20Garden!5e0!3m2!1sen!2sng!4v1754647892957!5m2!1sen!2sng"
+              class="w-full h-full"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#a35126] p-4 text-center mt-20">
+      <p class="lora text-white text-[14px]">
+        © 2025 Ronnie's Garden | Ijebu, Ogun State
+      </p>
+    </footer>
+  </body>
+  <script src="./src/script.js" defer></script>
+  <script>
+    document
+      .getElementById("bookingForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const form = this;
+        const requiredFields = form.querySelectorAll("[required]");
+        let isValid = true;
+
+        requiredFields.forEach((field) => {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.style.borderColor = "#ef4444";
+          } else {
+            field.style.borderColor = "#a35126";
+          }
+        });
+
+        if (!isValid) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        const timestamp = new Date().toLocaleString("en-NG", {
+          timeZone: "Africa/Lagos",
+        });
+
+        // Prepare email data (to be handled by backend)
+        const emailBody = `New Booking Inquiry\n\nName: ${data.name}\nEmail: ${data.email}\nCheck-in: ${data.checkin}\nCheck-out: ${data.checkout}\nRoom Type: ${data.roomType}\nMessage: ${data.message || "N/A"}\nTimestamp: ${timestamp}`;
+        // Placeholder for email submission (replace with actual backend endpoint)
+        fetch("/src/send-email.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ body: emailBody }).toString(),
+        }).catch((error) => console.error("Email failed:", error));
+
+        // Prepare WhatsApp message
+        const whatsappMessage = `New Booking Inquiry\nName: ${data.name}\nEmail: ${data.email}\nCheck-in: ${data.checkin}\nCheck-out: ${data.checkout}\nRoom Type: ${data.roomType}\nMessage: ${data.message || "N/A"}\nTimestamp: ${timestamp}`;
+        const whatsappUrl = `https://wa.me/2349055556114?text=${encodeURIComponent(
+          whatsappMessage
+        )}`;
+        window.open(whatsappUrl, "_blank");
+
+        // Show success message and reset form
+        document.getElementById("successMessage").classList.remove("hidden");
+        form.reset();
+        setTimeout(() => {
+          document.getElementById("successMessage").classList.add("hidden");
+        }, 10000);
+      });
+  </script>
+</html>
